@@ -22,7 +22,14 @@ p[acessed_route]['headers']
 # values: 'none', 'per_request', 'per_result'
 p[acessed_route]['billing_method']
 
+# leaflet only responds to POST requests
+# set to true for compatibility
+# (= change GET requests to POST)
+# if true, acess_method is set to POST
+# bool
+p[acessed_route]['force_request_method_to_post']
+
 # cost (either for the whole request or for one result)
 # integer
-p[acessed_route]['endpoints'][acessed_endpoint]
+p[acessed_route]['endpoints'][acess_method + acessed_endpoint]
 ```
