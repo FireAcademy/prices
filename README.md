@@ -68,6 +68,7 @@ p[acessed_route]['endpoints'][acess_method + acessed_endpoint]
 
 ## prices.json
 
+```json
 {
     "admin": {
         "base_url": "http://data-dude:5000/management/",
@@ -149,3 +150,4 @@ p[acessed_route]['endpoints'][acess_method + acessed_endpoint]
         }
     }
 }
+```

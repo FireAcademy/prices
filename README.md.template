@@ -40,4 +40,6 @@ p[acessed_route]['endpoints'][acess_method + acessed_endpoint]
 
 ## prices.json
 
+```json
 |PRICES_JSON_HERE_PLS_SER|
+```
