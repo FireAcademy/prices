@@ -18,5 +18,23 @@
 		"endpoints": {
 			"POST.webhook": {}
 		}
+	},
+	"api": {
+		"base_url": "http://data-dude:5000/api/",
+		"headers": ["Authorization"],
+		"billing_method": "none",
+		"endpoints": {
+			"GET.stripe-dashboard-url": {},
+			"POST.subscribe-url": {},
+			"POST.user-plan": {},
+			"GET.dashboard-data": {},
+			"POST.api-key": {},
+			"PUT.api-key": {},
+			"POST.gift-code": {},
+			"POST.ticket": {},
+			"GET.updates": {},
+			"POST.updates": {},
+			"GET.plans": {},
+		}
 	}
 }
