@@ -4,11 +4,11 @@
 		"headers": ["X-Management-Token"],
 		"billing_method": "none",
 		"endpoints": {
-			"GET.unresolved-tickets": {},
-			"POST.generate-gift-codes": {},
-			"POST.resolve-ticket": {},
-			"POST.verify-email": {},
-			"POST.resolve-ticket": {}
+			"GET.unresolved-tickets": 0,
+			"POST.generate-gift-codes": 0,
+			"POST.resolve-ticket": 0,
+			"POST.verify-email": 0,
+			"POST.resolve-ticket": 0
 		}
 	},
 	"stripe": {
@@ -16,7 +16,7 @@
 		"headers": ["Stripe-Signature"],
 		"billing_method": "none",
 		"endpoints": {
-			"POST.webhook": {}
+			"POST.webhook": 0
 		}
 	},
 	"api": {
@@ -24,17 +24,17 @@
 		"headers": ["Authorization"],
 		"billing_method": "none",
 		"endpoints": {
-			"GET.stripe-dashboard-url": {},
-			"POST.subscribe-url": {},
-			"POST.user-plan": {},
-			"GET.dashboard-data": {},
-			"POST.api-key": {},
-			"PUT.api-key": {},
-			"POST.gift-code": {},
-			"POST.ticket": {},
-			"GET.updates": {},
-			"POST.updates": {},
-			"GET.plans": {},
+			"GET.stripe-dashboard-url": 0,
+			"POST.subscribe-url": 0,
+			"POST.user-plan": 0,
+			"GET.dashboard-data": 0,
+			"POST.api-key": 0,
+			"PUT.api-key": 0,
+			"POST.gift-code": 0,
+			"POST.ticket": 0,
+			"GET.updates": 0,
+			"POST.updates": 0,
+			"GET.plans": 0,
 		}
 	}
 }

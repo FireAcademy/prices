@@ -22,7 +22,7 @@ p[acessed_route]['headers']
 # values: 'none', 'per_request', 'per_result'
 p[acessed_route]['billing_method']
 
-# object containing per-endpoint configuration
-# keys: 'cost'
+# cost (either for the whole request or for one result)
+# integer
 p[acessed_route]['endpoints'][acessed_endpoint]
 ```
