@@ -2,7 +2,39 @@
 
 [FireAcademy.io](https://fireacademy.io) prices from catchpole config.
 
-## Format
+## Price Table
+
+|Service|             Endpoint            |Cost|Billing Method|
+|-------|---------------------------------|----|--------------|
+|leaflet|       get_blockchain_state      | 10 |  Per-Request |
+|leaflet|            get_block            | 25 |  Per-Request |
+|leaflet|            get_blocks           | 25 |  Per-Request |
+|leaflet|     get_block_count_metrics     | 10 |  Per-Request |
+|leaflet|    get_block_record_by_height   | 50 |  Per-Request |
+|leaflet|         get_block_record        | 25 |  Per-Request |
+|leaflet|        get_block_records        | 25 |  Per-Request |
+|leaflet|         get_block_spends        | 100|  Per-Request |
+|leaflet|   get_unfinished_block_headers  | 20 |  Per-Request |
+|leaflet|        get_network_space        | 100|  Per-Request |
+|leaflet|    get_additions_and_removals   | 100|  Per-Request |
+|leaflet|         get_network_info        | 10 |  Per-Request |
+|leaflet| get_recent_signage_point_or_eos | 20 |  Per-Request |
+|leaflet| get_coin_records_by_puzzle_hash | 100|  Per-Request |
+|leaflet|get_coin_records_by_puzzle_hashes| 100|  Per-Request |
+|leaflet|     get_coin_record_by_name     | 25 |  Per-Request |
+|leaflet|    get_coin_records_by_names    | 25 |  Per-Request |
+|leaflet|  get_coin_records_by_parent_ids |5000|  Per-Request |
+|leaflet|     get_coin_records_by_hint    | 500|  Per-Request |
+|leaflet|             push_tx             |1000|  Per-Request |
+|leaflet|     get_puzzle_and_solution     | 25 |  Per-Request |
+|leaflet|      get_all_mempool_tx_ids     | 10 |  Per-Request |
+|leaflet|      get_all_mempool_items      | 10 |  Per-Request |
+|leaflet|    get_mempool_item_by_tx_id    | 10 |  Per-Request |
+|leaflet|         get_fee_estimate        | 10 |  Per-Request |
+|leaflet|            get_routes           | 10 |  Per-Request |
+|leaflet|             healthz             | 10 |  Per-Request |
+
+## prices.json Format
 
 Since almost everyone can read python:
 
@@ -33,3 +65,87 @@ p[acessed_route]['force_request_method_to_post']
 # integer
 p[acessed_route]['endpoints'][acess_method + acessed_endpoint]
 ```
+
+## prices.json
+
+{
+    "admin": {
+        "base_url": "http://data-dude:5000/management/",
+        "headers": [
+            "X-Management-Token"
+        ],
+        "billing_method": "none",
+        "endpoints": {
+            "GET.unresolved-tickets": 0,
+            "POST.generate-gift-codes": 0,
+            "POST.resolve-ticket": 0,
+            "POST.verify-email": 0,
+            "POST.api-key-info": 0
+        }
+    },
+    "stripe": {
+        "base_url": "http://data-dude:5000/stripe/",
+        "headers": [
+            "Stripe-Signature"
+        ],
+        "billing_method": "none",
+        "endpoints": {
+            "POST.webhook": 0
+        }
+    },
+    "api": {
+        "base_url": "http://data-dude:5000/api/",
+        "headers": [
+            "Authorization"
+        ],
+        "billing_method": "none",
+        "endpoints": {
+            "GET.stripe-dashboard-url": 0,
+            "POST.subscribe-url": 0,
+            "POST.user-plan": 0,
+            "GET.dashboard-data": 0,
+            "POST.api-key": 0,
+            "PUT.api-key": 0,
+            "POST.gift-code": 0,
+            "POST.ticket": 0,
+            "GET.updates": 0,
+            "POST.updates": 0,
+            "GET.plans": 0
+        }
+    },
+    "leaflet": {
+        "base_url": "http://leaflet:18444/",
+        "headers": [],
+        "billing_method": "per_request",
+        "force_request_method_to_post": true,
+        "endpoints": {
+            "POST.get_blockchain_state": 10,
+            "POST.get_block": 25,
+            "POST.get_blocks": 25,
+            "POST.get_block_count_metrics": 10,
+            "POST.get_block_record_by_height": 50,
+            "POST.get_block_record": 25,
+            "POST.get_block_records": 25,
+            "POST.get_block_spends": 100,
+            "POST.get_unfinished_block_headers": 20,
+            "POST.get_network_space": 100,
+            "POST.get_additions_and_removals": 100,
+            "POST.get_network_info": 10,
+            "POST.get_recent_signage_point_or_eos": 20,
+            "POST.get_coin_records_by_puzzle_hash": 100,
+            "POST.get_coin_records_by_puzzle_hashes": 100,
+            "POST.get_coin_record_by_name": 25,
+            "POST.get_coin_records_by_names": 25,
+            "POST.get_coin_records_by_parent_ids": 5000,
+            "POST.get_coin_records_by_hint": 500,
+            "POST.push_tx": 1000,
+            "POST.get_puzzle_and_solution": 25,
+            "POST.get_all_mempool_tx_ids": 10,
+            "POST.get_all_mempool_items": 10,
+            "POST.get_mempool_item_by_tx_id": 10,
+            "POST.get_fee_estimate": 10,
+            "POST.get_routes": 10,
+            "POST.healthz": 10
+        }
+    }
+}

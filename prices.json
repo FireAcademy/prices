@@ -8,7 +8,7 @@
 			"POST.generate-gift-codes": 0,
 			"POST.resolve-ticket": 0,
 			"POST.verify-email": 0,
-			"POST.resolve-ticket": 0
+			"POST.api-key-info": 0
 		}
 	},
 	"stripe": {
@@ -34,7 +34,7 @@
 			"POST.ticket": 0,
 			"GET.updates": 0,
 			"POST.updates": 0,
-			"GET.plans": 0,
+			"GET.plans": 0
 		}
 	},
 	"leaflet": {
