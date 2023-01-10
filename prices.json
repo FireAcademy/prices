@@ -10,5 +10,13 @@
 			"POST.verify-email": {},
 			"POST.resolve-ticket": {}
 		}
+	},
+	"stripe": {
+		"base_url": "http://data-dude:5000/stripe/",
+		"headers": ["Stripe-Signature"],
+		"billing_method": "none",
+		"endpoints": {
+			"POST.webhook": {}
+		}
 	}
 }
