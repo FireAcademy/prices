@@ -1,7 +1,7 @@
 {
 	"admin": {
 		"base_url": "http://data-dude:5000/management/",
-		"required_headers": ["X-Management-Token"],
+		"headers": ["X-Management-Token"],
 		"billing_method": "none",
 		"endpoints": {
 			"GET.unresolved-tickets": {},
