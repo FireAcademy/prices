@@ -9,17 +9,20 @@ Since almost everyone can read python:
 ```python
 p = open('prices.json', 'r').read()
 
+# internal url to forward the request to
+# string
 p[acessed_route]['base_url']
-#	internal url to forward the request to
 
+# headers to include in the request
+# list of strings
 p[acessed_route]['headers']
-#	headers to include in the request
 
+# billing method per request
+# string
+# values: 'none', 'per_request', 'per_result'
 p[acessed_route]['billing_method']
-#	billing method per request
-#	values: 'none', 'per_request', 'per_result'
 
+# object containing per-endpoint configuration
+# keys: 'cost'
 p[acessed_route]['endpoints'][acessed_endpoint]
-#	object containing per-endpoint configuration
-#	keys: 'cost'
 ```
