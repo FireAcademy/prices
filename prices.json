@@ -1,0 +1,14 @@
+{
+	"admin": {
+		"base_url": "http://data-dude:5000/management/",
+		"required_headers": ["X-Management-Token"],
+		"billing_method": "none",
+		"endpoints": {
+			"GET.unresolved-tickets": {},
+			"POST.generate-gift-codes": {},
+			"POST.resolve-ticket": {},
+			"POST.verify-email": {},
+			"POST.resolve-ticket": {}
+		}
+	}
+}
