@@ -13,8 +13,11 @@ for service, serviceInfo in prices.items():
 		billing_method = 'Per-Result'
 
 	for endpointMethodAndName, endpointCost in serviceInfo['endpoints'].items():
-		endpointName = endpointMethodAndName.split('.')[-1]
+		arr = endpointMethodAndName.split('.')
+		endpointMethod = arr[0]
+		endpointName = arr[-1]
 		data.append({
+			'Method': endpointMethod,
 			'Service': service,
 			'Endpoint': endpointName,
 			'Cost': endpointCost,
