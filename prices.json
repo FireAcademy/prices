@@ -38,7 +38,7 @@
 		}
 	},
 	"leaflet": {
-		"base_url": "http://leaflet:18444/",
+		"base_url": "http://leaflet:18444/rpc/",
 		"headers": [],
 		"billing_method": "per_request",
 		"endpoints": {
