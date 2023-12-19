@@ -37,6 +37,7 @@
 |  GET |     leaflet     |      get_all_mempool_items      | 10 |  Per-Request |
 | POST |     leaflet     |      get_all_mempool_items      | 10 |  Per-Request |
 | POST |     leaflet     |    get_mempool_item_by_tx_id    | 10 |  Per-Request |
+| POST |     leaflet     |  get_mempool_items_by_coin_name | 10 |  Per-Request |
 | POST |     leaflet     |         get_fee_estimate        | 10 |  Per-Request |
 |  GET |     leaflet     |            get_routes           | 10 |  Per-Request |
 | POST |     leaflet     |            get_routes           | 10 |  Per-Request |
@@ -195,6 +196,7 @@ p[acessed_route]['endpoints'][acess_method + acessed_endpoint]
             "GET.get_all_mempool_items": 10,
             "POST.get_all_mempool_items": 10,
             "POST.get_mempool_item_by_tx_id": 10,
+            "POST.get_mempool_items_by_coin_name": 10,
             "POST.get_fee_estimate": 10,
             "GET.get_routes": 10,
             "POST.get_routes": 10,
